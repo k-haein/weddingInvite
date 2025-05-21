@@ -19,29 +19,71 @@ document.querySelectorAll(".section").forEach((section) => {
 });
 
 // 갤러리 모달 기능
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modal-img");
-const galleryImgs = document.querySelectorAll(".gallery-img");
-let currentIndex = 0;
 
-galleryImgs.forEach((img, index) => {
-  img.addEventListener("click", () => {
-    modal.style.display = "flex";
-    modalImg.src = img.src;
-    currentIndex = index;
+  const galleryImgs = document.querySelectorAll('.gallery-img');
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+  const closeBtn = document.getElementById('close');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+
+  const allImgs = Array.from(galleryImgs);
+  const imagesPerLoad = 12;
+  let currentIndex = 0;
+  let modalIndex = 0;
+
+  function showImages() {
+    for (let i = currentIndex; i < currentIndex + imagesPerLoad; i++) {
+      if (allImgs[i]) {
+        allImgs[i].style.display = 'block';
+      }
+    }
+    currentIndex += imagesPerLoad;
+
+    if (currentIndex >= allImgs.length) {
+      loadMoreBtn.style.display = 'none';
+    }
+  }
+
+  // 초기 이미지 숨김
+  allImgs.forEach(img => (img.style.display = 'none'));
+  showImages();
+
+  loadMoreBtn.addEventListener('click', showImages);
+
+  // 모달 열기
+  allImgs.forEach((img, i) => {
+    img.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      modalImg.src = img.src;
+      modalIndex = i;
+    });
   });
-});
 
-document.getElementById("close").onclick = () => (modal.style.display = "none");
-document.getElementById("prev").onclick = () => changeImg(-1);
-document.getElementById("next").onclick = () => changeImg(1);
+  // 모달 닫기
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
 
-function changeImg(direction) {
-  currentIndex =
-    (currentIndex + direction + galleryImgs.length) % galleryImgs.length;
-  modalImg.src = galleryImgs[currentIndex].src;
-}
+  // 이전 이미지
+  prevBtn.addEventListener('click', () => {
+    modalIndex = (modalIndex - 1 + allImgs.length) % allImgs.length;
+    modalImg.src = allImgs[modalIndex].src;
+  });
 
+  // 다음 이미지
+  nextBtn.addEventListener('click', () => {
+    modalIndex = (modalIndex + 1) % allImgs.length;
+    modalImg.src = allImgs[modalIndex].src;
+  });
+
+  // ESC 키로 닫기
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      modal.style.display = 'none';
+    }
+  });
 
 //캘린더 설정
 const calendarEl = document.getElementById('calendar');
@@ -68,13 +110,6 @@ const calendar = new FullCalendar.Calendar(calendarEl,{
 calendar.render();
 
 
-//카카오맵 실행스크립트
-new daum.roughmap.Lander({
-  timestamp: "1747296746915",
-  key: "2o2ie",
-  mapWidth: "400",
-  mapHeight: "240",
-}).render();
 
 
 // 오시는길 토글
@@ -158,5 +193,16 @@ function shareMessage() {
 }
 
 function githubLink(){
-
+  window.open("https://github.com/k-haein/weddingInvite")
 }
+
+
+
+    
+//카카오맵 실행스크립트
+new daum.roughmap.Lander({
+  timestamp: "1747296746915",
+  key: "2o2ie",
+  mapWidth: "400",
+  mapHeight: "240",
+}).render();

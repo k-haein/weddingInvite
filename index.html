@@ -9,11 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
     <!-- 카카오톡 공유하기 -->
-    <!--<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <script>
-      Kakao.init("여기에_당신의_앱키"); // 카카오 개발자 앱 키로 초기화
-    </script> -->
-    
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.5/kakao.min.js"
       integrity="sha384-dok87au0gKqJdxs7msEdBPNnKSRT+/mhTVzq+qOhcL464zXwvcrpjeWvyj1kCdq6" crossorigin="anonymous"></script>
     <script>
@@ -24,19 +19,16 @@
       console.log(Kakao.isInitialized());
     </script>
 
-
-
-    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-    <script defer src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=apikey작성"></script>
-     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
-    <title>test page</title>
+   <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+    <title>우리 결혼합니다!</title>
   </head>
 
 
 
   <body>
     <section id="main" class="section">
-      <img src="images/메인사진.jpg" alt="메인 이미지" class="main-img" />
+      <img src="images/main.JPG" alt="메인 이미지" class="main-img" />
       <div class="main-text">이봐봐 | 김뫄뫄</div>
       <div class="main-detail">
         2026.02.28 SAT AM 11:00<br />
@@ -53,7 +45,7 @@
     </section>
 
     <section id="info2" class="section">
-      <img src="images/서브사진.jpg" alt="서브 이미지" class="sub-img" />
+      <img src="images/sub.JPG" alt="서브 이미지" class="sub-img" />
       <div class="sub-text">
         이사장 · 임여사 의 차남 이봐봐<br />
         김사장 · 전여사 의 장녀 김뫄뫄
@@ -68,25 +60,38 @@
 
     <section id="gallery" class="section">
       <h2>갤러리</h2>
-      <div class="gallery-grid">
-        <img src="images/사진1.png" alt="사진1" class="gallery-img" />
-        <img src="images/사진1.png" alt="사진1" class="gallery-img" />
-        <img src="images/사진1.png" alt="사진1" class="gallery-img" />
-        <img src="images/사진1.png" alt="사진1" class="gallery-img" />
-        <img src="images/사진1.png" alt="사진1" class="gallery-img" />
-        <img src="images/사진1.png" alt="사진1" class="gallery-img" />
-        <img src="images/사진1.png" alt="사진1" class="gallery-img" />
-        <img src="images/사진1.png" alt="사진1" class="gallery-img" />
-        <img src="images/사진1.png" alt="사진1" class="gallery-img" />
-        <img src="images/사진1.png" alt="사진1" class="gallery-img" />
-        <img src="images/사진1.png" alt="사진1" class="gallery-img" />
-        <img src="images/사진1.png" alt="사진1" class="gallery-img" />
-      </div>
-      <div id="modal" class="modal">
-        <span id="prev">&#10094;</span>
-        <img id="modal-img" />
-        <span id="next">&#10095;</span>
-        <span id="close">&times;</span>
+      <div id="gallery-container">
+        <div id="gallery" class="gallery-grid">
+          <img src="images/IMG_9544.JPG" alt="사진9544" class="gallery-img" />
+          <img src="images/IMG_4880.JPG" alt="사진4880" class="gallery-img" />
+          <img src="images/IMG_4888.JPG" alt="사진4888" class="gallery-img" />
+          <img src="images/IMG_8326.JPG" alt="사진8326" class="gallery-img" />
+          <img src="images/IMG_8330.JPG" alt="사진8330" class="gallery-img" />
+          <img src="images/IMG_2176.JPG" alt="사진2176" class="gallery-img" />
+          <img src="images/IMG_9196.JPG" alt="사진9196" class="gallery-img" />
+          <img src="images/IMG_5181.JPG" alt="사진5181" class="gallery-img" />
+          <img src="images/IMG_3692.JPG" alt="사진3692" class="gallery-img" />
+          <img src="images/IMG_0269.JPG" alt="사진0269" class="gallery-img" />
+          <img src="images/IMG_9427.JPG" alt="사진9427" class="gallery-img" />
+          <img src="images/IMG_1568.JPG" alt="사진1568" class="gallery-img" />
+          <img src="images/IMG_6318.JPG" alt="사진6318" class="gallery-img" />
+          <img src="images/IMG_8980.JPG" alt="사진8980" class="gallery-img" />
+          <img src="images/IMG_6320.JPG" alt="사진6320" class="gallery-img" />
+          <img src="images/IMG_0578.JPG" alt="사진0578" class="gallery-img" />
+          <img src="images/IMG_8406.JPG" alt="사진8406" class="gallery-img" />
+          <img src="images/IMG_1283.JPG" alt="사진1283" class="gallery-img" />
+          <img src="images/IMG_0956.JPG" alt="사진0956" class="gallery-img" />
+          <img src="images/IMG_4871.JPG" alt="사진4871" class="gallery-img" />
+          <img src="images/IMG_0524.JPG" alt="사진0524" class="gallery-img" />
+          <!-- 가로 사진 -->
+          <img src="images/IMG_4331.JPG" alt="사진4331" class="gallery-img" />
+          <img src="images/IMG_6129.JPG" alt="사진6129" class="gallery-img" />
+          <img src="images/IMG_0596.JPG" alt="사진0596" class="gallery-img" />
+          <img src="images/IMG_0080.JPG" alt="사진0080" class="gallery-img" />
+          <img src="images/IMG_8178.JPG" alt="사진8178" class="gallery-img" />
+          <img src="images/IMG_8292.JPG" alt="사진8292" class="gallery-img" />
+        </div>
+        <button id="loadMoreBtn">더보기</button>
       </div>
     </section>
     <section id="location" class="section">
@@ -194,7 +199,7 @@
     <section id="share" class="section">
       <h2>공유</h2>
       <div class="link-group">
-        <div class="link-item" onclick="shareMessage()">
+        <div class="link-item" onclick="shareKakao()">
         <img src="https://cdn-icons-png.flaticon.com/512/2111/2111466.png" alt="KakaoTalk" class="icon" />
         <span>카카오톡 공유</span>
         </div>
@@ -208,5 +213,14 @@
         </div>
       </div>
     </section>
+
+    <!-- 갤러리 모달 -->
+    <div id="modal" class="modal">
+      <span id="prev">&#10094;</span>
+      <img id="modal-img" />
+      <span id="next">&#10095;</span>
+      <span id="close">&times;</span>
+    </div>
+
   </body>
 </html>

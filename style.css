@@ -5,7 +5,7 @@ body {
   background-color: #ffffff;
 }
 
-body > * {
+body > *:not(#modal) { /* 모달은 꽉차게 */
   max-width: 400px;
   margin: 0 auto;
   background-color: #ffffff;
@@ -132,17 +132,116 @@ section.visible {
 }
 
 
-
+/* 사진 갤러리 */
+/* 갤러리 그리드 */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .gallery-img {
   width: 100%;
+  height: auto;
+  cursor: pointer;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* 더보기 버튼 */
+#loadMoreBtn {
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  display: block;
   cursor: pointer;
 }
+
+/* 모달 전체 화면 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 90%;
+ /* max-height: 80%;*/
+
+  object-fit: contain;
+
+
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* 모달 화살표 및 닫기 버튼 */
+#prev, #next, #close {
+  position: absolute;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  user-select: none;
+}
+
+#prev {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#next {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#close {
+  top: 20px;
+  right: 30px;
+}
+
+
+/*
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+#loadMoreBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 .modal {
   display: none;
@@ -182,6 +281,9 @@ section.visible {
   top: 20px;
   right: 20px;
 }
+
+*/
+
 
 .map-box {
   width: 100%;
