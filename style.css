@@ -1,0 +1,374 @@
+body {
+  font-family: "Nanum Myeongjo", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+body > * {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+section {
+  padding: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease-out;
+}
+
+section.visible {
+  /* 최초에 감췄다가 보여짐 */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#info,
+#location {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+}
+
+.main-text {
+  padding-top: 10px;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 25px;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.39em;
+  line-height: 1.4em;
+}
+
+.main-detail {
+  padding-top: 10px;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 15px;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.07em;
+  line-height: 1.4em;
+}
+
+#info p {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 18px;
+  color: rgb(51, 51, 51);
+  text-align: center;
+  font-weight:lighter;
+  font-style: italic;
+  letter-spacing: 0.39em;
+  line-height: 2.3em;
+}
+
+.main-img {
+  width: 100%;
+  height: auto;
+}
+
+.sub-img{
+  width: 100%;
+  height: auto;
+  padding-bottom: 30px;
+}
+
+.sub-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 18px;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.39em;
+  line-height: 1.4em;
+
+  border-top: 2px dotted #ccc;
+  border-bottom: 2px dotted #ccc;
+  border-left: none;
+  border-right: none;
+}
+
+
+.common-text{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 18px;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.39em;
+  line-height: 1.4em;
+}
+
+#calendar {
+  max-width: 400px;
+  margin:0 auto;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+ 
+}
+
+.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number:first-child {
+  background-color: #f8b5f3;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  min-width: 32px;
+}
+.fc .fc-daygrid-day-number {
+  text-align: center;
+  display: inline-block;
+  float: none;
+  border-radius: 20px;
+  line-height: 1.5em
+}
+
+
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.gallery-img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 80%;
+}
+
+#prev,
+#next,
+#close {
+  position: absolute;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+
+#prev {
+  left: 20px;
+}
+#next {
+  right: 20px;
+}
+#close {
+  top: 20px;
+  right: 20px;
+}
+
+.map-box {
+  width: 100%;
+  height: 300px;
+  margin: 10px 0;
+}
+
+.map-info {
+  padding: 20px;
+  font-size: 0.8rem;
+  color: rgb(102, 102, 102);
+}
+
+.account-info {
+  display: none;
+  margin: 10px 0;
+}
+
+.map-btn {
+  display:flex;
+  justify-content: center;
+}
+.map-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pretendard';
+  width: 33%;
+  background-color: #fff;
+  height: 50px;
+  margin-right: 15px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(102, 100, 100, 0.1);
+  color:inherit;
+  text-decoration: none;
+}
+
+.map-btn img {
+  width: 25px;
+  margin-right: 5px;
+  justify-content: center;
+}
+
+.location-wrapper {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #f7f7f7;
+  border: 1px dotted #ccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.location-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 20px;
+  user-select: none;
+  border-top: 2px dotted #ccc;
+  border-bottom: 2px dotted #ccc;
+}
+
+.toggle-icon {
+  transition: transform 0.3s ease;
+  font-size: 0.9em;
+}
+
+/* 기본은 닫힌 상태 */
+.location-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  font-size: 0.95em;
+  padding: 0 2px;
+}
+
+/* 열릴 때 */
+.location-wrapper.open .location-content {
+  max-height: 500px;
+  padding-top: 10px;
+}
+
+.location-wrapper.open .toggle-icon {
+  transform: rotate(180deg); /* 화살표 아래로 */
+}
+
+.location-content p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.bus {
+  display: inline-block;
+  margin-top: 4px;
+  color: #555;
+  font-style: italic;
+}
+
+/* 계좌번호 드롭다운 */
+.info-wrapper {
+  padding-top: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.info-header {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px dotted #ccc;
+}
+
+.info-content {
+  display: none;
+  padding: 10px 15px;
+}
+
+.info-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.info-text {
+  margin-right: 5px;
+  color: #444;
+  word-break: break-word;
+  text-align: left;
+}
+
+button {
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e6e6e6;
+}
+
+
+/* 링크 공유 */
+.link-group {
+  background-color: #ffffff;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.link-item:hover {
+  opacity: 0.7;
+}
+
+.icon {
+  font-size: 16px; /* 텍스트 크기와 같게 */
+  color: #999;
+  width: 20px;
+  height: 20px;
+}
