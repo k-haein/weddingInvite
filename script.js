@@ -207,17 +207,12 @@ function shareMessage() {
     content: {
       title: "이봐봐 ♥ 김뫄뫄 결혼합니다!",
       description: "2026년 2월 28일 토요일 오전 11시",
-      imageUrl: "images/sub.JPG",
+      imageUrl: "/images/sub.JPG",
       link: {
         // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
         mobileWebUrl: "https://k-haein.github.io/weddingInvite/",
         webUrl: "https://k-haein.github.io/weddingInvite/",
       },
-    },
-    social: {
-      likeCount: 286,
-      commentCount: 45,
-      sharedCount: 845,
     },
     buttons: [
       {
