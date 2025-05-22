@@ -5,20 +5,23 @@ body {
   background-color: #ffffff;
 }
 
-body > *:not(#modal) { /* 모달은 꽉차게 */
+body > *:not(#modal) {
+  /* 모달은 꽉차게 */
   max-width: 400px;
   margin: 0 auto;
   background-color: #ffffff;
 }
 
 section {
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.7s ease-out;
+  box-sizing: border-box;
 }
 
 section.visible {
@@ -60,7 +63,7 @@ section.visible {
   font-size: 18px;
   color: rgb(51, 51, 51);
   text-align: center;
-  font-weight:lighter;
+  font-weight: lighter;
   font-style: italic;
   letter-spacing: 0.39em;
   line-height: 2.3em;
@@ -71,7 +74,7 @@ section.visible {
   height: auto;
 }
 
-.sub-img{
+.sub-img {
   width: 100%;
   height: auto;
   padding-bottom: 30px;
@@ -94,8 +97,7 @@ section.visible {
   border-right: none;
 }
 
-
-.common-text{
+.common-text {
   padding-top: 30px;
   padding-bottom: 30px;
   font-family: "Nanum Myeongjo", serif;
@@ -109,11 +111,10 @@ section.visible {
 
 #calendar {
   max-width: 400px;
-  margin:0 auto;
+  margin: 0 auto;
   background-color: #fff;
   padding: 10px;
   border-radius: 10px;
- 
 }
 
 .fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number:first-child {
@@ -128,9 +129,8 @@ section.visible {
   display: inline-block;
   float: none;
   border-radius: 20px;
-  line-height: 1.5em
+  line-height: 1.5em;
 }
-
 
 /* 사진 갤러리 */
 /* 갤러리 그리드 */
@@ -178,18 +178,16 @@ section.visible {
 
 .modal img {
   max-width: 90%;
- /* max-height: 80%;*/
-
   object-fit: contain;
-
-
   max-height: 90vh;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 /* 모달 화살표 및 닫기 버튼 */
-#prev, #next, #close {
+#prev,
+#next,
+#close {
   position: absolute;
   color: white;
   font-size: 2em;
@@ -214,81 +212,18 @@ section.visible {
   right: 30px;
 }
 
-
-/*
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-#loadMoreBtn {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background-color: #555;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.modal img {
-  max-width: 90%;
-  max-height: 80%;
-}
-
-#prev,
-#next,
-#close {
-  position: absolute;
-  font-size: 2em;
-  color: white;
-  cursor: pointer;
-}
-
-#prev {
-  left: 20px;
-}
-#next {
-  right: 20px;
-}
-#close {
-  top: 20px;
-  right: 20px;
-}
-
-*/
-
-
 .map-box {
-  width: 100%;
-  height: 300px;
-  margin: 10px 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* 맵 컨테이너 크기 조정 */
+#daumRoughmapContainer1747296746915 {
+  max-width: 100%;
+  width: 100% !important;
+  box-sizing: border-box;
 }
 
 .map-info {
@@ -303,21 +238,22 @@ section.visible {
 }
 
 .map-btn {
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 .map-btn a {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
+  font-size: 13px;
   width: 33%;
   background-color: #fff;
   height: 50px;
   margin-right: 15px;
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(102, 100, 100, 0.1);
-  color:inherit;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -394,7 +330,7 @@ section.visible {
   background-color: white;
   border: 1px solid #eee;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .info-header {
@@ -441,7 +377,6 @@ button {
 button:hover {
   background-color: #e6e6e6;
 }
-
 
 /* 링크 공유 */
 .link-group {

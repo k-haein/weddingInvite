@@ -6,25 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
     <!-- 카카오톡 공유하기 -->
-    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.5/kakao.min.js"
-      integrity="sha384-dok87au0gKqJdxs7msEdBPNnKSRT+/mhTVzq+qOhcL464zXwvcrpjeWvyj1kCdq6" crossorigin="anonymous"></script>
+    <script
+      src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.5/kakao.min.js"
+      integrity="sha384-dok87au0gKqJdxs7msEdBPNnKSRT+/mhTVzq+qOhcL464zXwvcrpjeWvyj1kCdq6"
+      crossorigin="anonymous"
+    ></script>
     <script>
       // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해야 합니다.
-      Kakao.init('aa74a0bfd2033767a981ce9ae12625f6');
+      Kakao.init("aa74a0bfd2033767a981ce9ae12625f6");
 
       // SDK 초기화 여부를 판단합니다.
       console.log(Kakao.isInitialized());
     </script>
 
-   <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+    <script
+      charset="UTF-8"
+      class="daum_roughmap_loader_script"
+      src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
     <title>우리 결혼합니다!</title>
   </head>
-
-
 
   <body>
     <section id="main" class="section">
@@ -69,7 +77,7 @@
           <img src="images/IMG_8330.JPG" alt="사진8330" class="gallery-img" />
           <img src="images/IMG_2176.JPG" alt="사진2176" class="gallery-img" />
           <img src="images/IMG_9196.JPG" alt="사진9196" class="gallery-img" />
-          <img src="images/IMG_5181.JPG" alt="사진5181" class="gallery-img" />
+          <img src="images/IMG_5181.jpg" alt="사진5181" class="gallery-img" />
           <img src="images/IMG_3692.JPG" alt="사진3692" class="gallery-img" />
           <img src="images/IMG_0269.JPG" alt="사진0269" class="gallery-img" />
           <img src="images/IMG_9427.JPG" alt="사진9427" class="gallery-img" />
@@ -89,7 +97,7 @@
           <img src="images/IMG_0596.JPG" alt="사진0596" class="gallery-img" />
           <img src="images/IMG_0080.JPG" alt="사진0080" class="gallery-img" />
           <img src="images/IMG_8178.JPG" alt="사진8178" class="gallery-img" />
-          <img src="images/IMG_8292.JPG" alt="사진8292" class="gallery-img" />
+          <img src="images/IMG_8292.jpg" alt="사진8292" class="gallery-img" />
         </div>
         <button id="loadMoreBtn">더보기</button>
       </div>
@@ -100,22 +108,41 @@
         인천 부평구 체육관로 60<br />
         삼산월드컨벤션 웨딩홀
       </div>
-      <!-- 1. 약도 노드 -->
-      <div
-        id="daumRoughmapContainer1747296746915"
-        class="root_daum_roughmap root_daum_roughmap_landing"
-      ></div>
+      <div class="map-box">
+        <!-- 1. 약도 노드 -->
+        <div
+          id="daumRoughmapContainer1747296746915"
+          class="root_daum_roughmap root_daum_roughmap_landing"
+        ></div>
+      </div>
       <div class="map-info">지도를 클릭하시면 카카오 맵으로 연결됩니다.</div>
 
-      <div class="map-btn" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500" data-aos-delay="50" data-aos-once="true">
-        <a href="https://map.naver.com/v5/search/인천 부평구 체육관로 60" target="_blank">
-        <img src="images/navermap-icon.png" alt="네이버지도">네이버지도</a>
-        <a href="javascript:moveApp('카카오', '37.507808', '126.738249', '인천 부평구 체육관로 60');">
-        <img src="images/kakaomap_icon.png" alt="카카오내비">카카오내비</a>
-        <a href="https://apis.openapi.sk.com/tmap/app/routes?appKey=qbh9OCsSLN3iUcU8zJ6jg5pAO2CjhwiX86hz1jWD&amp;name=인천 부평구 체육관로 60&amp;lon=126.738249&amp;lat=37.507808&amp;coordType=WGS84GEO" target="_blank">
-        <img src="images/tmap_icon.png" alt="티맵">티맵</a>
+      <div
+        class="map-btn"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        data-aos-delay="50"
+        data-aos-once="true"
+      >
+        <a
+          href="https://map.naver.com/v5/search/인천 부평구 체육관로 60"
+          target="_blank"
+        >
+          <img src="images/navermap-icon.png" alt="네이버지도" />네이버지도</a
+        >
+        <a
+          href="javascript:moveApp('카카오', '37.507808', '126.738249', '인천 부평구 체육관로 60');"
+        >
+          <img src="images/kakaomap_icon.png" alt="카카오내비" />카카오내비</a
+        >
+        <a
+          href="https://apis.openapi.sk.com/tmap/app/routes?appKey=qbh9OCsSLN3iUcU8zJ6jg5pAO2CjhwiX86hz1jWD&amp;name=인천 부평구 체육관로 60&amp;lon=126.738249&amp;lat=37.507808&amp;coordType=WGS84GEO"
+          target="_blank"
+        >
+          <img src="images/tmap_icon.png" alt="티맵" />티맵</a
+        >
       </div>
-
 
       <div class="location-wrapper">
         <div class="location-header" id="locationToggle">
@@ -123,92 +150,114 @@
           <span class="toggle-icon">▲</span>
         </div>
         <div class="location-content">
-          <p><strong>📍 버스 이용 시</strong><br>
-            - 삼산월드체육관 하차 시 도보 2분<br>
-            <span class="bus">버스: 24, 28, 67-1, 87, 558, 79, 1200, 9300</span><br>
-            - 한국만화박물관 하차 시 도보 6분<br>
-            <span class="bus">버스: 565, 53, 59-1, 37, 526, 558, 565, 인천e음 61</span>
+          <p>
+            <strong>📍 버스 이용 시</strong><br />
+            - 삼산월드체육관 하차 시 도보 2분<br />
+            <span class="bus">버스: 24, 28, 67-1, 87, 558, 79, 1200, 9300</span
+            ><br />
+            - 한국만화박물관 하차 시 도보 6분<br />
+            <span class="bus"
+              >버스: 565, 53, 59-1, 37, 526, 558, 565, 인천e음 61</span
+            >
           </p>
-          <p><strong>🚇 지하철 이용 시</strong><br>
+          <p>
+            <strong>🚇 지하철 이용 시</strong><br />
             - 7호선 삼산체육관역 3번 출구 하차 시 도보 3분
           </p>
-          <p><strong>🅿️ 주차장 안내</strong><br>
+          <p>
+            <strong>🅿️ 주차장 안내</strong><br />
             <span class="parking-info">
-              - 주차규모 : 약 1000대 (지하 600대, 지상 400대)<br>
-              - 주차요금 : 2시간 무료(이후 30분 당 500원)<br>
+              - 주차규모 : 약 1000대 (지하 600대, 지상 400대)<br />
+              - 주차요금 : 2시간 무료(이후 30분 당 500원)<br />
             </span>
           </p>
         </div>
       </div>
     </section>
     <section id="account" class="section">
-        <h2>마음 전하는 곳</h2>
-        <div class="common-text">
+      <h2>마음 전하는 곳</h2>
+      <div class="common-text">
         축하의 마음을 담아<br />축의금을 전달해보세요.<br />
-        </div>
+      </div>
 
-        <div class="info-container1">
-          <div class="info-header" onclick="toggleInfo(1)">
-            <span>신랑측 계좌번호</span>
-            <span id="info-arrow1">▲</span>
+      <div class="info-container1">
+        <div class="info-header" onclick="toggleInfo(1)">
+          <span>신랑측 계좌번호</span>
+          <span id="info-arrow1">▲</span>
+        </div>
+        <div class="info-content" id="infoContent1">
+          <div class="info-line">
+            <span class="info-text">신랑 이봐봐</span>
+            <span class="info-text" id="account1"
+              >카카오뱅크 3333-00-1234567</span
+            >
+            <button onclick="copyToClipboard('account1')">복사</button>
           </div>
-          <div class="info-content" id="infoContent1">
-            <div class="info-line">
-              <span class="info-text">신랑 이봐봐</span>
-              <span class="info-text" id="account1">카카오뱅크 3333-00-1234567</span>
-              <button onclick="copyToClipboard('account1')">복사</button>
-            </div>
-            <div class="info-line">
-              <span class="info-text">아버지 이사장</span>
-              <span class="info-text" id="account2">우리은행 1002-123-456789</span>
-              <button onclick="copyToClipboard('account2')">복사</button>
-            </div>
-            <div class="info-line">
-              <span class="info-text">어머니 임여사</span>
-              <span class="info-text" id="account3">농협 351-0123-4567-89</span>
-              <button onclick="copyToClipboard('account3')">복사</button>
-            </div>
+          <div class="info-line">
+            <span class="info-text">아버지 이사장</span>
+            <span class="info-text" id="account2"
+              >우리은행 1002-123-456789</span
+            >
+            <button onclick="copyToClipboard('account2')">복사</button>
+          </div>
+          <div class="info-line">
+            <span class="info-text">어머니 임여사</span>
+            <span class="info-text" id="account3">농협 351-0123-4567-89</span>
+            <button onclick="copyToClipboard('account3')">복사</button>
           </div>
         </div>
-        
-        <div class="info-container2">
-          <div class="info-header" onclick="toggleInfo(2)">
-            <span>신부측 계좌번호</span>
-            <span id="info-arrow2">▲</span>
+      </div>
+
+      <div class="info-container2">
+        <div class="info-header" onclick="toggleInfo(2)">
+          <span>신부측 계좌번호</span>
+          <span id="info-arrow2">▲</span>
+        </div>
+        <div class="info-content" id="infoContent2">
+          <div class="info-line">
+            <span class="info-text">신부 김뫄뫄</span>
+            <span class="info-text" id="account4"
+              >카카오뱅크 3333-00-1234567</span
+            >
+            <button onclick="copyToClipboard('account4')">복사</button>
           </div>
-          <div class="info-content" id="infoContent2">
-            <div class="info-line">
-              <span class="info-text">신부 김뫄뫄</span>
-              <span class="info-text" id="account4">카카오뱅크 3333-00-1234567</span>
-              <button onclick="copyToClipboard('account4')">복사</button>
-            </div>
-            <div class="info-line">
-              <span class="info-text">아버지 김사장</span>
-              <span class="info-text" id="account5">우리은행 1002-123-456789</span>
-              <button onclick="copyToClipboard('account5')">복사</button>
-            </div>
-            <div class="info-line">
-              <span class="info-text">어머니 전여사</span>
-              <span class="info-text" id="account6">농협 351-0123-4567-89</span>
-              <button onclick="copyToClipboard('account6')">복사</button>
-            </div>
+          <div class="info-line">
+            <span class="info-text">아버지 김사장</span>
+            <span class="info-text" id="account5"
+              >우리은행 1002-123-456789</span
+            >
+            <button onclick="copyToClipboard('account5')">복사</button>
+          </div>
+          <div class="info-line">
+            <span class="info-text">어머니 전여사</span>
+            <span class="info-text" id="account6">농협 351-0123-4567-89</span>
+            <button onclick="copyToClipboard('account6')">복사</button>
           </div>
         </div>
-  </section>
+      </div>
+    </section>
 
     <section id="share" class="section">
       <h2>공유</h2>
       <div class="link-group">
         <div class="link-item" onclick="shareKakao()">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111466.png" alt="KakaoTalk" class="icon" />
-        <span>카카오톡 공유</span>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2111/2111466.png"
+            alt="KakaoTalk"
+            class="icon"
+          />
+          <span>카카오톡 공유</span>
         </div>
         <div class="link-item" onclick="copyToClipboard('url')">
           <span class="icon">🔗</span>
           <span>링크 복사하기</span>
         </div>
         <div class="link-item" onclick="githubLink()">
-          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="icon" />
+          <img
+            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+            alt="GitHub"
+            class="icon"
+          />
           <span>깃허브</span>
         </div>
       </div>
@@ -221,6 +270,5 @@
       <span id="next">&#10095;</span>
       <span id="close">&times;</span>
     </div>
-
   </body>
 </html>
