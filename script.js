@@ -96,7 +96,29 @@ const calendar = new FullCalendar.Calendar(calendarEl, {
     center: "",
     right: "",
   },
-  events: [],
+  events: [
+    {
+      start: "2026-02-28",
+      icon: "💍",
+      display: "block",
+      backgroundColor: "transparent",
+      borderColor: "transparent",
+      textColor: "#000",
+    },
+  ],
+  eventContent: function (arg) {
+    const icon = arg.event.extendedProps.icon;
+    const title = arg.event.title;
+
+    return {
+      html: `
+            <div style="text-align:center;">
+              <div style="font-size: 1.3rem;">${icon || ""}</div>
+              <div style="font-size: 0.9rem;">${title}</div>
+            </div>
+          `,
+    };
+  },
   selectable: false,
   editable: false,
   navLinks: false,
@@ -108,6 +130,34 @@ const calendar = new FullCalendar.Calendar(calendarEl, {
 });
 
 calendar.render();
+
+//카운트다운
+function updateCountdown() {
+  const targetDate = new Date("2026-02-28T11:00:00"); // 목표 시간
+  const now = new Date();
+  const diff = targetDate - now;
+
+  const timeEl = document.getElementById("time");
+  const messageEl = document.getElementById("message");
+
+  if (diff <= 0) {
+    timeEl.innerText = "0일 0시간 0분 0초";
+    messageEl.innerText = "시간이 종료되었습니다.";
+    clearInterval(timer);
+    return;
+  }
+
+  const seconds = Math.floor(diff / 1000) % 60;
+  const minutes = Math.floor(diff / 1000 / 60) % 60;
+  const hours = Math.floor(diff / 1000 / 60 / 60) % 24;
+  const days = Math.floor(diff / 1000 / 60 / 60 / 24);
+
+  timeEl.innerText = `${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
+  messageEl.innerText = "남았습니다.";
+}
+
+const timer = setInterval(updateCountdown, 1000); // 1초마다 갱신
+updateCountdown();
 
 // 오시는길 토글
 const toggleArea = document.getElementById("locationToggle");
@@ -148,27 +198,20 @@ function copyToClipboard(id) {
   );
 }
 
-//링크 공유
-function shareKakao() {
-  // 카카오 SDK를 이미 로드했다고 가정 (아래 참고)
-  Kakao.Share.sendScrap({
-    requestUrl: window.location.href,
-  });
-}
-
+//카카오 링크 공유
 function shareMessage() {
   Kakao.Share.sendDefault({
     objectType: "location",
-    address: "경기 성남시 분당구 판교역로 166 3층",
-    addressTitle: "카카오 판교아지트 카페톡",
+    address: "인천 부평구 체육관로 60 삼산월드컨벤션 웨딩홀",
+    addressTitle: "삼산월드컨벤션 웨딩홀",
     content: {
-      title: "신메뉴 출시♥︎ 체리블라썸라떼",
-      description: "이번 주는 체리블라썸라떼 1+1",
-      imageUrl: "images/서브사진.jpg",
+      title: "이봐봐 ♥ 김뫄뫄 결혼합니다!",
+      description: "2026년 2월 28일 토요일 오전 11시",
+      imageUrl: "images/sub.JPG",
       link: {
         // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
-        mobileWebUrl: "https://developers.kakao.com",
-        webUrl: "https://developers.kakao.com",
+        mobileWebUrl: "https://k-haein.github.io/weddingInvite/",
+        webUrl: "https://k-haein.github.io/weddingInvite/",
       },
     },
     social: {
@@ -180,8 +223,8 @@ function shareMessage() {
       {
         title: "웹으로 보기",
         link: {
-          mobileWebUrl: "https://developers.kakao.com",
-          webUrl: "https://developers.kakao.com",
+          mobileWebUrl: "https://k-haein.github.io/weddingInvite/",
+          webUrl: "https://k-haein.github.io/weddingInvite/",
         },
       },
     ],
@@ -202,9 +245,9 @@ new daum.roughmap.Lander({
 
 function kakaoNavi() {
   Kakao.Navi.share({
-    name: "현대백화점 판교점",
-    x: 127.11205203011632,
-    y: 37.39279717586919,
+    name: "삼산월드컨벤션 웨딩홀",
+    x: 126.738249,
+    y: 37.507808,
     coordType: "wgs84",
   });
 }

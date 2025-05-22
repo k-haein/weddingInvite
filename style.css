@@ -13,8 +13,8 @@ body > *:not(#modal) {
 }
 
 section {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
@@ -37,7 +37,7 @@ section.visible {
 }
 
 .main-text {
-  padding-top: 10px;
+  padding-top: 20px;
   font-family: "Nanum Myeongjo", serif;
   font-size: 25px;
   color: rgb(51, 51, 51);
@@ -130,6 +130,42 @@ section.visible {
   float: none;
   border-radius: 20px;
   line-height: 1.5em;
+}
+
+/* 일요일: 첫 번째 컬럼 (Sun) */
+.fc .fc-col-header-cell:nth-child(1) {
+  color: red;
+}
+
+/* 토요일: 일곱 번째 컬럼 (Sat) */
+.fc .fc-col-header-cell:nth-child(7) {
+  color: blue;
+}
+
+/* 카운트다운 */
+.countdown-box {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+}
+
+.countdown-title {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.countdown-time {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.countdown-message {
+  font-size: 1em;
+  color: #888;
 }
 
 /* 사진 갤러리 */
@@ -285,12 +321,17 @@ section.visible {
   border-bottom: 2px dotted #ccc;
 }
 
-.toggle-icon {
-  transition: transform 0.3s ease;
-  font-size: 0.9em;
+/* 기본은 열려 있는 상태 */
+.location-wrapper.open .location-content {
+  max-height: 500px;
+  padding-top: 10px;
 }
 
-/* 기본은 닫힌 상태 */
+.location-wrapper.open .toggle-icon {
+  transform: rotate(180deg); /* 화살표 아래로 */
+}
+
+/* 닫힐 때 */
 .location-content {
   max-height: 0;
   overflow: hidden;
@@ -299,14 +340,13 @@ section.visible {
   padding: 0 2px;
 }
 
-/* 열릴 때 */
-.location-wrapper.open .location-content {
-  max-height: 500px;
-  padding-top: 10px;
+.toggle-icon {
+  transition: transform 0.3s ease;
+  font-size: 0.9em;
 }
 
-.location-wrapper.open .toggle-icon {
-  transform: rotate(180deg); /* 화살표 아래로 */
+.location-wrapper:not(.open) .toggle-icon {
+  transform: rotate(0deg); /* 화살표 위로 */
 }
 
 .location-content p {
