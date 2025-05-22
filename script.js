@@ -171,11 +171,11 @@ function shareMessage() {
         webUrl: "https://developers.kakao.com",
       },
     },
-    // social: {
-    //   likeCount: 286,
-    //   commentCount: 45,
-    //   sharedCount: 845,
-    // },
+    social: {
+      likeCount: 286,
+      commentCount: 45,
+      sharedCount: 845,
+    },
     buttons: [
       {
         title: "웹으로 보기",
@@ -199,3 +199,12 @@ new daum.roughmap.Lander({
   mapWidth: "400",
   mapHeight: "240",
 }).render();
+
+function kakaoNavi() {
+  Kakao.Navi.share({
+    name: "현대백화점 판교점",
+    x: 127.11205203011632,
+    y: 37.39279717586919,
+    coordType: "wgs84",
+  });
+}
