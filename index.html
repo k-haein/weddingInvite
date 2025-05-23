@@ -36,7 +36,7 @@
 
   <body>
     <section id="main" class="section">
-      <img src="images/main.JPG" alt="메인 이미지" class="main-img" />
+      <img src="images/main.JPG" loading="lazy" alt="메인 이미지" class="main-img" />
       <div class="main-text">이봐봐 | 김뫄뫄</div>
       <div class="main-detail">
         2026.02.28 <b style="color: blue">SAT</b> AM 11:00<br />
@@ -53,7 +53,7 @@
     </section>
 
     <section id="info2" class="section">
-      <img src="images/sub.JPG" alt="서브 이미지" class="sub-img" />
+      <img src="images/sub.JPG" loading="lazy" alt="서브 이미지" class="sub-img" />
       <div class="sub-text">
         이사장 · 임여사 의 차남 이봐봐<br />
         김사장 · 전여사 의 장녀 김뫄뫄
@@ -69,40 +69,51 @@
         <div class="countdown-time" id="time">--일 --시간 --분 --초</div>
         <div class="countdown-message" id="message">남았습니다.</div>
       </div>
+      <a
+        href="https://www.google.com/calendar/render?action=TEMPLATE&text=재민♥해인 결혼식&dates=20260228T020000Z/20260228T030000Z&details=결혼식 와주실꺼죠?ㅎㅎ&location=7호선 삼산체육관역 삼산월드컨벤션 웨딩홀"
+        target="_blank"
+        class="calendar-btn"
+      >
+        📅 구글 캘린더에 저장
+      </a>
+      <br />
+      <a href="#" onclick="downloadICS()" class="calendar-btn"
+        >📅 기본 캘린더에 저장</a
+      >
     </section>
 
     <section id="gallery" class="section">
       <h2>갤러리</h2>
       <div id="gallery-container">
         <div id="gallery" class="gallery-grid">
-          <img src="images/IMG_9544.JPG" alt="사진9544" class="gallery-img" />
-          <img src="images/IMG_4880.JPG" alt="사진4880" class="gallery-img" />
-          <img src="images/IMG_4888.JPG" alt="사진4888" class="gallery-img" />
-          <img src="images/IMG_8326.JPG" alt="사진8326" class="gallery-img" />
-          <img src="images/IMG_8330.JPG" alt="사진8330" class="gallery-img" />
-          <img src="images/IMG_2176.JPG" alt="사진2176" class="gallery-img" />
-          <img src="images/IMG_9196.JPG" alt="사진9196" class="gallery-img" />
-          <img src="images/IMG_5181.jpg" alt="사진5181" class="gallery-img" />
-          <img src="images/IMG_3692.JPG" alt="사진3692" class="gallery-img" />
-          <img src="images/IMG_0269.JPG" alt="사진0269" class="gallery-img" />
-          <img src="images/IMG_9427.JPG" alt="사진9427" class="gallery-img" />
-          <img src="images/IMG_1568.JPG" alt="사진1568" class="gallery-img" />
-          <img src="images/IMG_6318.JPG" alt="사진6318" class="gallery-img" />
-          <img src="images/IMG_8980.JPG" alt="사진8980" class="gallery-img" />
-          <img src="images/IMG_6320.JPG" alt="사진6320" class="gallery-img" />
-          <img src="images/IMG_0578.JPG" alt="사진0578" class="gallery-img" />
-          <img src="images/IMG_8406.JPG" alt="사진8406" class="gallery-img" />
-          <img src="images/IMG_1283.JPG" alt="사진1283" class="gallery-img" />
-          <img src="images/IMG_0956.JPG" alt="사진0956" class="gallery-img" />
-          <img src="images/IMG_4871.JPG" alt="사진4871" class="gallery-img" />
-          <img src="images/IMG_0524.JPG" alt="사진0524" class="gallery-img" />
+          <img src="images/IMG_9544.JPG" loading="lazy" alt="사진9544" class="gallery-img" />
+          <img src="images/IMG_4880.JPG" loading="lazy" alt="사진4880" class="gallery-img" />
+          <img src="images/IMG_4888.JPG" loading="lazy" alt="사진4888" class="gallery-img" />
+          <img src="images/IMG_8326.JPG" loading="lazy" alt="사진8326" class="gallery-img" />
+          <img src="images/IMG_8330.JPG" loading="lazy" alt="사진8330" class="gallery-img" />
+          <img src="images/IMG_2176.JPG" loading="lazy" alt="사진2176" class="gallery-img" />
+          <img src="images/IMG_9196.JPG" loading="lazy" alt="사진9196" class="gallery-img" />
+          <img src="images/IMG_5181.jpg" loading="lazy" alt="사진5181" class="gallery-img" />
+          <img src="images/IMG_3692.JPG" loading="lazy" alt="사진3692" class="gallery-img" />
+          <img src="images/IMG_0269.JPG" loading="lazy" alt="사진0269" class="gallery-img" />
+          <img src="images/IMG_9427.JPG" loading="lazy" alt="사진9427" class="gallery-img" />
+          <img src="images/IMG_1568.JPG" loading="lazy" alt="사진1568" class="gallery-img" />
+          <img src="images/IMG_6318.JPG" loading="lazy" alt="사진6318" class="gallery-img" />
+          <img src="images/IMG_8980.JPG" loading="lazy" alt="사진8980" class="gallery-img" />
+          <img src="images/IMG_6320.JPG" loading="lazy" alt="사진6320" class="gallery-img" />
+          <img src="images/IMG_0578.JPG" loading="lazy" alt="사진0578" class="gallery-img" />
+          <img src="images/IMG_8406.JPG" loading="lazy" alt="사진8406" class="gallery-img" />
+          <img src="images/IMG_1283.JPG" loading="lazy" alt="사진1283" class="gallery-img" />
+          <img src="images/IMG_0956.JPG" loading="lazy" alt="사진0956" class="gallery-img" />
+          <img src="images/IMG_4871.JPG" loading="lazy" alt="사진4871" class="gallery-img" />
+          <img src="images/IMG_0524.JPG" loading="lazy" alt="사진0524" class="gallery-img" />
           <!-- 가로 사진 -->
-          <img src="images/IMG_4331.JPG" alt="사진4331" class="gallery-img" />
-          <img src="images/IMG_6129.JPG" alt="사진6129" class="gallery-img" />
-          <img src="images/IMG_0596.JPG" alt="사진0596" class="gallery-img" />
-          <img src="images/IMG_0080.JPG" alt="사진0080" class="gallery-img" />
-          <img src="images/IMG_8178.JPG" alt="사진8178" class="gallery-img" />
-          <img src="images/IMG_8292.jpg" alt="사진8292" class="gallery-img" />
+          <img src="images/IMG_4331.JPG" loading="lazy" alt="사진4331" class="gallery-img" />
+          <img src="images/IMG_6129.JPG" loading="lazy" alt="사진6129" class="gallery-img" />
+          <img src="images/IMG_0596.JPG" loading="lazy" alt="사진0596" class="gallery-img" />
+          <img src="images/IMG_0080.JPG" loading="lazy" alt="사진0080" class="gallery-img" />
+          <img src="images/IMG_8178.JPG" loading="lazy" alt="사진8178" class="gallery-img" />
+          <img src="images/IMG_8292.jpg" loading="lazy" alt="사진8292" class="gallery-img" />
         </div>
         <button id="loadMoreBtn">더보기</button>
       </div>
@@ -194,19 +205,25 @@
             <span class="info-text" id="account1"
               >카카오뱅크 3333-00-1234567</span
             >
-            <button onclick="copyToClipboard('account1')">복사</button>
+            <button class="copy" onclick="copyToClipboard('account1')">
+              복사
+            </button>
           </div>
           <div class="info-line">
             <span class="info-text">아버지 이사장</span>
             <span class="info-text" id="account2"
               >우리은행 1002-123-456789</span
             >
-            <button onclick="copyToClipboard('account2')">복사</button>
+            <button class="copy" onclick="copyToClipboard('account2')">
+              복사
+            </button>
           </div>
           <div class="info-line">
             <span class="info-text">어머니 임여사</span>
             <span class="info-text" id="account3">농협 351-0123-4567-89</span>
-            <button onclick="copyToClipboard('account3')">복사</button>
+            <button class="copy" onclick="copyToClipboard('account3')">
+              복사
+            </button>
           </div>
         </div>
       </div>
@@ -219,22 +236,34 @@
         <div class="info-content" id="infoContent2">
           <div class="info-line">
             <span class="info-text">신부 김뫄뫄</span>
-            <span class="info-text" id="account4"
-              >카카오뱅크 3333-00-1234567</span
-            >
-            <button onclick="copyToClipboard('account4')">복사</button>
+            <span class="info-text" id="account4">카카오뱅크 3333-222-222</span>
+            <div class="buttons">
+              <img
+                class="pay"
+                src="images/pay.png"
+                alt="kakaopay_icon"
+                onclick="location.href='https://link.kakaopay.com/_/HB5LHhL'"
+              />
+              <button class="copy" onclick="copyToClipboard('account4')">
+                복사
+              </button>
+            </div>
           </div>
           <div class="info-line">
             <span class="info-text">아버지 김사장</span>
             <span class="info-text" id="account5"
               >우리은행 1002-123-456789</span
             >
-            <button onclick="copyToClipboard('account5')">복사</button>
+            <button class="copy" onclick="copyToClipboard('account5')">
+              복사
+            </button>
           </div>
           <div class="info-line">
             <span class="info-text">어머니 전여사</span>
             <span class="info-text" id="account6">농협 351-0123-4567-89</span>
-            <button onclick="copyToClipboard('account6')">복사</button>
+            <button class="copy" onclick="copyToClipboard('account6')">
+              복사
+            </button>
           </div>
         </div>
       </div>

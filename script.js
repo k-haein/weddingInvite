@@ -159,6 +159,33 @@ function updateCountdown() {
 const timer = setInterval(updateCountdown, 1000); // 1초마다 갱신
 updateCountdown();
 
+// 기본캘린더 저장
+function downloadICS() {
+  const icsContent = `
+    BEGIN:VCALENDAR
+    VERSION:2.0
+    PRODID:-//Your Site//Event//EN
+    BEGIN:VEVENT
+    UID:${Date.now()}@yoursite.com
+    DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").split(".")[0]}Z
+    DTSTART:20260228T020000Z
+    DTEND:20260228T030000Z
+    SUMMARY:재민♥해인 결혼식
+    DESCRIPTION:결혼식 와주실꺼죠?ㅎㅎ
+    LOCATION:7호선 삼산체육관역 삼산월드컨벤션 웨딩홀
+    END:VEVENT
+    END:VCALENDAR
+  `.trim();
+
+  const blob = new Blob([icsContent], { type: "text/calendar" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "wedding-invitation.ics";
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
 // 오시는길 토글
 const toggleArea = document.getElementById("locationToggle");
 const wrapper = document.querySelector(".location-wrapper");

@@ -145,6 +145,7 @@ section.visible {
 /* 카운트다운 */
 .countdown-box {
   padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
   font-size: 15px;
   color: #333;
@@ -166,6 +167,14 @@ section.visible {
 .countdown-message {
   font-size: 1em;
   color: #888;
+}
+
+.calendar-btn {
+  color: #555;
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
 }
 
 /* 사진 갤러리 */
@@ -404,7 +413,7 @@ section.visible {
   text-align: left;
 }
 
-button {
+/*button {
   background-color: #f3f3f3;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -416,6 +425,32 @@ button {
 
 button:hover {
   background-color: #e6e6e6;
+}*/
+
+.buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+button.copy {
+  font-size: 0.85em;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button.copy:hover {
+  background-color: #ddd;
+}
+
+.pay {
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
 }
 
 /* 링크 공유 */
