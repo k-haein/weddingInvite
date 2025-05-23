@@ -161,6 +161,7 @@ updateCountdown();
 
 // 기본캘린더 저장(IOS 전용)
 function downloadICS() {
+  event.preventDefault(); // 페이지 이동 막기
   const icsContent = `
     BEGIN:VCALENDAR
     VERSION:2.0
