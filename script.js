@@ -109,7 +109,7 @@ const calendar = new FullCalendar.Calendar(calendarEl, {
   eventContent: function (arg) {
     const icon = arg.event.extendedProps.icon;
     const title = arg.event.title;
-
+    // 아이콘만 크게 삽입
     return {
       html: `
             <div style="text-align:center;">
@@ -159,7 +159,7 @@ function updateCountdown() {
 const timer = setInterval(updateCountdown, 1000); // 1초마다 갱신
 updateCountdown();
 
-// 기본캘린더 저장
+// 기본캘린더 저장(IOS 전용)
 function downloadICS() {
   const icsContent = `
     BEGIN:VCALENDAR
@@ -186,7 +186,7 @@ function downloadICS() {
   URL.revokeObjectURL(url);
 }
 
-// 오시는길 토글
+// 오시는길 토글(기본 열린 상태)
 const toggleArea = document.getElementById("locationToggle");
 const wrapper = document.querySelector(".location-wrapper");
 
@@ -194,7 +194,7 @@ toggleArea.addEventListener("click", function () {
   wrapper.classList.toggle("open");
 });
 
-//계좌번호 토글
+//계좌번호 토글(기본 닫힌 상태)
 function toggleInfo(num) {
   const content = document.getElementById("infoContent" + num);
   const arrow = document.getElementById("info-arrow" + num);
@@ -234,14 +234,14 @@ function shareMessage() {
     content: {
       title: "이봐봐 ♥ 김뫄뫄 결혼합니다!",
       description: "2026년 2월 28일 토요일 오전 11시",
-      imageUrl: "/images/sub.JPG",
+      imageUrl: "https://k-haein.github.io/weddingInvite/images/main.JPG", //웹경로로 작성
       link: {
-        // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
+        // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함(나중에 수정)
         mobileWebUrl: "https://k-haein.github.io/weddingInvite/",
         webUrl: "https://k-haein.github.io/weddingInvite/",
       },
     },
-    buttons: [
+    buttons: [ //후에 도메인 연결 시 수정 필요
       {
         title: "웹으로 보기",
         link: {
