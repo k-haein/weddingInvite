@@ -178,13 +178,19 @@ function downloadICS() {
     END:VCALENDAR
   `.trim();
 
-  const blob = new Blob([icsContent], { type: "text/calendar" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "wedding-invitation.ics";
-  a.click();
-  URL.revokeObjectURL(url);
+  // const blob = new Blob([icsContent], { type: "text/calendar" });
+  // const url = URL.createObjectURL(blob);
+  // const a = document.createElement("a");
+  // a.href = url;
+  // a.download = "wedding-invitation.ics";
+  // a.click();
+  // URL.revokeObjectURL(url);
+
+  const encoded = encodeURIComponent(icsContent);
+  const url = "data:text/calendar;charset=utf8," + encoded;
+
+  window.location.href = url;  // 다운로드가 아니라 열기
+
 }
 
 // 오시는길 토글(기본 열린 상태)
